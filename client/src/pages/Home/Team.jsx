@@ -26,7 +26,7 @@ const Team = () => {
                     <Grid container spacing={2} style={{ marginTop: '100px' }}>
                         {employees && employees.map((employee) => {
                             return (
-                                <Grid item lg={3} md={6} sm={12}>
+                                <Grid key={employee._id} item lg={3} md={6} sm={12}>
                                     <Card
                                         hoverable
                                         style={{
