@@ -8,7 +8,7 @@ const Team = () => {
     const [employees, setEmployees] = useState([])
     useEffect(() => {
         getAllEmployees().then((res) => {
-            setEmployees(res)
+            setEmployees(res.data)
         })
     }, [])
     return (

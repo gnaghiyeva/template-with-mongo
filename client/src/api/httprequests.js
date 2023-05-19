@@ -4,7 +4,7 @@ import axios from "axios";
 //get all Employees
 export const getAllEmployees = async () => {
   let globalData;
-  await axios.get(`${BASE_URL}/employees/`).then((res) => {
+  await axios.get(`${BASE_URL}/employees`).then((res) => {
     globalData = res.data;
     });
     return globalData
