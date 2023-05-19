@@ -1,0 +1,58 @@
+.header{
+    /* background-image: url("./image/shape.svg"); */
+    background-image: url("./image/shape.png");
+    width: 100%;
+    height: 825px;
+    background-position-y: bottom; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.navbarList{
+    display: flex;
+    
+   
+    
+}
+.navbarListItem{
+    justify-content: space-between;
+    margin-right: 40px;
+    
+   
+    
+}
+.navbarButtons{
+display:flex;
+margin-right: 40px;
+align-items: center;
+}
+
+.navbarTexts{
+    text-align: center;
+    width: 20%;
+    margin: 100px auto;
+   
+}
+.navbarTexts span{
+   color: orange;
+   font-weight: 700;
+}
+.navbarTexts h1{
+    color:white;
+    font-weight: 700;
+    font-size: 2.5em;
+ }
+
+ .navbarTexts p{
+    color:white;
+    font-weight: 700;
+    font-size: 1em;
+ }
