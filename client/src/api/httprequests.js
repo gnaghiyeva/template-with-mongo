@@ -32,3 +32,7 @@ export const deleteEmployeeByID = async (ID) => {
 export const postEmployee = (newEmployee) => {
   axios.post(`${BASE_URL}/employees`, newEmployee);
 };
+
+export const editEmployee = (id,payload)=>{
+  axios.put(`${BASE_URL}/employees/${id}`,payload);
+}

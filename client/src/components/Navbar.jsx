@@ -2,6 +2,7 @@ import React from 'react'
 import navbarstyle from "../components/navbar.module.css"
 import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
+import MenuIcon from '@mui/icons-material/Menu';
 const Navbar = () => {
 
   return (
@@ -19,6 +20,8 @@ const Navbar = () => {
             <li className={navbarstyle.navbarListItem} style={{color:'white', textDecoration:'none'}}>Product</li>
             <li className={navbarstyle.navbarListItem}style={{color:'white', textDecoration:'none'}}>Pricing</li>
             <li className={navbarstyle.navbarListItem}style={{color:'white', textDecoration:'none'}}>Contact</li>
+            <li className={navbarstyle.navbarListItem}style={{color:'white', textDecoration:'none'}}><Link to='/add-employee' style={{color:'white', textDecoration:'none'}}>Add Employee</Link></li>
+            <MenuIcon className={navbarstyle.menuicon} style={{display:'none'}}/>
         </ul>
         
 
@@ -38,7 +41,7 @@ const Navbar = () => {
         <br/>  <br/>
         <p>Find the right instructor for you from over 10,000 teachers</p>
         <br/>  <br/>
-        <div >
+        <div>
             <Button style={{marginRight:'20px'}} variant='contained' color='warning'>Get Quote Now</Button>
             <Button variant='outlined' color='warning'>Learn More</Button>
         </div>

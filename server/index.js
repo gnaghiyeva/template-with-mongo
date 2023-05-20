@@ -82,6 +82,18 @@ app.delete("/api/employees/:id", async(req,res)=>{
   }
 })
 
+
+app.put("/api/employees/:id", async(req, res) => {
+  const id = req.params.id;
+  const { fullname, occupation, imageURL, linkF,linkI,linkT } = req.body;
+  const existedEmployee = await EmployeeModel.findByIdAndUpdate(id,{fullname:fullname, occupation:occupation, imageURL:imageURL, linkF:linkF, linkI:linkI,linkT:linkT})
+  if (existedEmployee == undefined) {
+    res.status(404).send("employee not found!");
+  } else {
+    res.status(200).send(`${fullname} updated succesfully`);
+  }
+});
+
 //Connecting Mongo DB
 DB_CONNECTION = process.env.DB_CONNECTION
 DB_PASSWORD = process.env.DB_PASSWORD
